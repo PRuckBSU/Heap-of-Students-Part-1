@@ -69,20 +69,30 @@ year = substring after second '/'
 
 convert all values to integers
 store values
+
 printDate()
+
 use switch statement to convert month number to month name
 print: MonthName day, year
+
 Address Class – Pseudocode
+
 init(street, city, state, zip)
 store each parameter into member variables
+
 printAddress()
+
 print street
 print city + " " + state + ", " + zip
+
 Compilation
+
 make
 make run
 make clean
+
 Current Output
+
 Hello!
 123 W Main St
 Muncie IN, 47303
