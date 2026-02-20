@@ -1,0 +1,29 @@
+CXX = g++
+CXXFLAGS = -Wall -g
+
+program: main.o date.o address.o student.o
+	$(CXX) $(CXXFLAGS) -o program main.o date.o address.o student.o
+
+main.o: main.cpp
+	$(CXX) $(CXXFLAGS) -c main.cpp
+
+date.o: date.cpp
+	$(CXX) $(CXXFLAGS) -c date.cpp
+
+address.o: address.cpp
+	$(CXX) $(CXXFLAGS) -c address.cpp
+
+student.o: student.cpp
+	$(CXX) $(CXXFLAGS) -c student.cpp
+
+run: program
+	./program
+
+debug: program
+	gdb ./program
+
+valgrind: program
+	valgrind ./program
+
+clean:
+	rm -f *.o program
